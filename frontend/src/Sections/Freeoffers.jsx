@@ -11,7 +11,7 @@ function Freeoffers() {
   useEffect(()=>{
     const getEvent=async()=>{
       try {
-        const res = await axios.get("https://localhost:4001/user/event");
+        const res = await axios.get("https://localhost:4001/user/events");
         const data= res.data.filter((data) => data.category === "Free");
         console.log(res.data)
         setEvent (data);
